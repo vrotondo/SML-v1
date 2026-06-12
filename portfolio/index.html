@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | AI & ML Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">VR</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-mobile" id="nav-mobile">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Vincenzo Rotondo</h1>
+      <h2 class="hero-title">
+        <span class="typing" id="typing"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-sub">
+        I build intelligent systems — from language models trained from scratch
+        to multi-agent AI architectures that solve real-world problems.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-card-header">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-filename">modern_slm.py</span>
+        </div>
+        <pre class="code-card-body"><code><span class="kw">class</span> <span class="cls">GroupedQueryAttention</span>(nn.Module):
+    <span class="kw">def</span> <span class="fn">__init__</span>(self, d_in, d_out,
+                 num_heads, num_kv_groups):
+        <span class="cm"># Efficient GQA — fewer KV heads</span>
+        self.heads = num_heads
+        self.kv_groups = num_kv_groups
+
+    <span class="kw">def</span> <span class="fn">forward</span>(self, x, mask=<span class="kw">None</span>):
+        <span class="cm"># RoPE + scaled dot-product</span>
+        q, k, v = self.qkv_proj(x)
+        <span class="kw">return</span> self.out_proj(attn)</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a developer passionate about the intersection of <strong>machine learning</strong>,
+            <strong>natural language processing</strong>, and <strong>agentic AI systems</strong>.
+            My projects range from implementing transformer architectures from the ground up to
+            orchestrating multi-agent pipelines that automate complex workflows.
+          </p>
+          <p>
+            I enjoy understanding how things work at a deep level — which is why I built a
+            small language model from scratch rather than simply fine-tuning an existing one.
+            That same curiosity drives me to design agent systems that are modular, explainable,
+            and genuinely useful.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">2</span>
+              <span class="stat-label">Featured Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">7</span>
+              <span class="stat-label">AI Agents Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon">🧠</div>
+            <h3>ML from Scratch</h3>
+            <p>Transformer attention, RoPE, RMSNorm, SwiGLU — implemented and trained without frameworks hiding the math.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🤖</div>
+            <h3>Agentic Systems</h3>
+            <p>Multi-agent orchestration with specialized roles, tool use, and structured workflows.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">⚖️</div>
+            <h3>Domain AI</h3>
+            <p>Applying AI to high-stakes domains — like legal case management — where reliability matters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML / CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">ML / AI</h3>
+          <div class="skill-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">Transformers</span>
+            <span class="tag">Tokenization</span>
+            <span class="tag">Attention Mechanisms</span>
+            <span class="tag">LLM Fine-tuning</span>
+            <span class="tag">Agentic Pipelines</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Frameworks & Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Anthropic SDK</span>
+            <span class="tag">Rich (TUI)</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Git</span>
+            <span class="tag">tiktoken</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Concepts</h3>
+          <div class="skill-tags">
+            <span class="tag">Grouped Query Attention</span>
+            <span class="tag">RoPE Embeddings</span>
+            <span class="tag">RMSNorm</span>
+            <span class="tag">SwiGLU</span>
+            <span class="tag">Multi-Agent Orchestration</span>
+            <span class="tag">RAG</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Project 1: SML -->
+        <article class="project-card" id="proj-slm">
+          <div class="project-header">
+            <div class="project-badge">Machine Learning</div>
+            <div class="project-links">
+              <a href="https://github.com/vrotondo/sml-v1" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Small Language Model (SML-v1)</h3>
+          <p class="project-desc">
+            A transformer-based language model built entirely from scratch in PyTorch —
+            no Hugging Face shortcuts. Implements modern LLM techniques including
+            Grouped Query Attention, Rotary Position Embeddings, RMSNorm, and SwiGLU
+            activations, mirroring the Llama architecture.
+          </p>
+          <div class="project-highlights">
+            <div class="highlight">
+              <span class="highlight-icon">⚡</span>
+              <span>Grouped Query Attention for memory efficiency</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">📐</span>
+              <span>RoPE embeddings for better positional encoding</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">🔧</span>
+              <span>Full training pipeline with custom dataloader</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">🧪</span>
+              <span>Demo, verification, and chatbot scripts included</span>
+            </div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">tiktoken</span>
+            <span class="tech-tag">Transformers</span>
+            <span class="tech-tag">GQA</span>
+            <span class="tech-tag">RoPE</span>
+          </div>
+          <div class="project-expand" id="slm-expand">
+            <button class="expand-btn" onclick="toggleExpand('slm-detail', 'slm-expand')">
+              Show Architecture Details ▾
+            </button>
+            <div class="expand-content" id="slm-detail" hidden>
+              <div class="arch-table">
+                <div class="arch-row">
+                  <span class="arch-key">Attention</span>
+                  <span class="arch-val">Grouped Query Attention (GQA) — multiple query heads share KV pairs</span>
+                </div>
+                <div class="arch-row">
+                  <span class="arch-key">Position</span>
+                  <span class="arch-val">Rotary Position Embeddings (RoPE) — relative position via rotation</span>
+                </div>
+                <div class="arch-row">
+                  <span class="arch-key">Norm</span>
+                  <span class="arch-val">RMSNorm — faster than LayerNorm, no mean subtraction</span>
+                </div>
+                <div class="arch-row">
+                  <span class="arch-key">Activation</span>
+                  <span class="arch-val">SwiGLU — gated linear unit with Swish, used in Llama</span>
+                </div>
+                <div class="arch-row">
+                  <span class="arch-key">Tokenizer</span>
+                  <span class="arch-val">tiktoken (GPT-2 BPE) for subword tokenization</span>
+                </div>
+                <div class="arch-row">
+                  <span class="arch-key">Training</span>
+                  <span class="arch-val">Custom dataloader with sliding-window context batching</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Legal AI -->
+        <article class="project-card" id="proj-legal">
+          <div class="project-header">
+            <div class="project-badge project-badge-green">Agentic AI</div>
+            <div class="project-links">
+              <a href="https://github.com/vrotondo/sml-v1" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Legal AI Agent System</h3>
+          <p class="project-desc">
+            A production-grade CLI application that uses a 7-agent architecture powered by Claude
+            to assist with legal case management. An orchestrator routes tasks to specialized agents
+            handling case intake, research, deadline tracking, document drafting, and more.
+          </p>
+          <div class="project-highlights">
+            <div class="highlight">
+              <span class="highlight-icon">🎯</span>
+              <span>Orchestrator routes tasks to 7 specialized agents</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">📅</span>
+              <span>Automated deadline tracking with urgency alerts</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">🗄️</span>
+              <span>Persistent SQLite database for case history</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">🖥️</span>
+              <span>Rich terminal UI with tables, panels, and prompts</span>
+            </div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Anthropic SDK</span>
+            <span class="tech-tag">Claude AI</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">Rich</span>
+            <span class="tech-tag">Multi-Agent</span>
+          </div>
+          <div class="project-expand" id="legal-expand">
+            <button class="expand-btn" onclick="toggleExpand('legal-detail', 'legal-expand')">
+              Show Agent Architecture ▾
+            </button>
+            <div class="expand-content" id="legal-detail" hidden>
+              <div class="agent-diagram">
+                <div class="agent-center">Orchestrator</div>
+                <div class="agent-spokes">
+                  <div class="agent-spoke">Case Intake</div>
+                  <div class="agent-spoke">Legal Research</div>
+                  <div class="agent-spoke">Deadline Tracker</div>
+                  <div class="agent-spoke">Document Drafter</div>
+                  <div class="agent-spoke">Client Liaison</div>
+                  <div class="agent-spoke">Case Analyzer</div>
+                  <div class="agent-spoke">Risk Assessor</div>
+                </div>
+              </div>
+              <p class="expand-note">
+                The orchestrator receives user intent, selects the appropriate specialist agent,
+                passes context (case number, client info, prior history from SQLite), and returns
+                a structured response — all within a Rich-powered terminal interface.
+              </p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="container contact-container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-sub">
+        I'm open to new opportunities, collaborations, and interesting conversations about AI.
+        Feel free to reach out!
+      </p>
+      <div class="contact-links">
+        <a href="https://github.com/vrotondo" target="_blank" rel="noopener" class="contact-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+          <small>vrotondo</small>
+        </a>
+        <a href="mailto:vrfr91@gmail.com" class="contact-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span>Email</span>
+          <small>vrfr91@gmail.com</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Built with care by Vincenzo Rotondo &mdash; <a href="https://github.com/vrotondo/sml-v1" target="_blank" rel="noopener">View Source</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
